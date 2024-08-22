@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Add / Edit";
+}
+
+@model FinanceTracker.Models.Expense 
+
+<div class="text-center">
+    <br />
+    <h1 class="display-4">Add or Edit your expense here</h1>
+</div>
+
+<form asp-action="AddEditExpenseForm" asp-asp-controller="Home"> 
+    <input hidden class="form-control" type="number" placeholder="0" asp-for="Id" />
+    
+    <labe class="mt-4">Value $</labe>
+    <input class="form-control" type="number" placeholder="0" asp-for="Value" step="0.01"/>
+    
+    <label class="mt-4">Description</label>
+    <input class="form-control" type="text" placeholder="Add a description" asp-for="Description" />
+
+    <button class="btn btn-primary mt-4" type="submit">Submit</button>
+</form>
